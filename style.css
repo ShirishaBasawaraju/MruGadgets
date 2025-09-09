@@ -1,0 +1,473 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 0, 3);
+    color: white;
+    padding: 20px 60px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 25px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.shiri{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(223, 88, 111);
+    color: rgb(10, 1, 1);
+}
+.text h1{
+font-size: 36px;
+margin-bottom: 16px;
+font-weight: bolder;
+}
+.text p{
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.logo img{
+width: 400;
+height: auto;
+}
+
+ button{
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.shiri button:hover{
+    background-color: rgb(16, 167, 172);
+}
+.features{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    padding: 20px 40px;
+    text-align: center;
+ 
+}
+.feature{
+flex: 1 1 250px;
+  background-color: rgb(206, 57, 92);
+  color: black;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 2em;
+}
+.feature:hover{
+     background-color: rgb(193, 44, 71);
+}
+.s2{
+    text-align: center;
+}
+.productgallery{
+    /* display: flex; */
+    background-color: rgb(206, 57, 92);
+    padding: 20px 40px;
+    text-align: center;
+}
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+.product-card{
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(30, 24, 14);
+    transition: .3s ease;
+
+}
+.product-card:hover{
+    transform: scale(1.1, 1.1 );
+}
+.update{
+    text-align: center;
+    background-color:  rgb(234, 226, 228);
+    color: black;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+input[type="text"]{
+    width: 250px;
+    height: 30px;
+}
+
+.submit{
+    background-color: white;
+    color: blue;
+    height: 30px;
+    justify-content: center;
+    
+}
+footer{
+ text-align: center;
+ font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 40px;
+    
+}
+/* logo  */
+
+.logo img {
+    width: 200px;              /* Adjust size as needed */
+    height: 200px;
+    border-radius: 40%;        /* Makes the logo circular */
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* subtle shadow for depth */
+    cursor: pointer;
+}
+
+/* Hover effect: rotate, scale, and glowing border */
+.logo img:hover {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 0 25px rgba(11, 0, 0, 0.8), 0 0 40px rgba(221, 236, 236, 0.5);
+}
+
+/* Floating Animation */
+@keyframes floatLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.logo img {
+    animation: floatLogo 9s ease-in-out infinite;
+}
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Change text color on hover */
+.nav-links a:hover {
+    color: #10A7AC;  /* Matches logo glow */
+}
+
+/* Sliding underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #10A7AC;  /* Matches logo glow */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Product detail section */
+.product-detail {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+/* Product title */
+.product-detail h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Product image */
+.product-detail img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    animation: fadeIn 1s ease forwards;
+}
+
+.product-detail img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(16, 167, 172, 0.5), 0 5px 15px rgba(16, 167, 172, 0.3);
+}
+
+/* Product info text */
+.product-detail p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Back button */
+.product-detail button {
+    background-color: black;
+    color: white;
+    padding: 15px 35px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-detail button:hover {
+    background-color: rgb(16, 167, 172);
+    transform: scale(1.05);
+}
+
+/* Optional: fade-up animation for all elements inside product-detail */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cart-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+#close-cart {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#cart-items p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#checkout-btn {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background-color: rgb(16, 167, 172);
+}
+/* Add to Cart Button on Product Cards */
+.product-card button {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: rgb(16, 167, 172);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(16, 167, 172, 0.4), 0 4px 10px rgba(16, 167, 172, 0.2);
+}
+#payment-section {
+    background-color: rgb(245, 245, 245);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#payment-section h3 {
+    margin-bottom: 10px;
+}
+
+#payment-section input[type="radio"] {
+    margin-right: 10px;
+}
+
+#pay-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#pay-btn:hover {
+    background-color: rgb(16, 167, 172);
+    transform: scale(1.05);
+}
+
+/* Make homepage take full height and push footer down */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main hero section grow to fill space */
+.shiri {
+    flex: 1; /* Pushes footer to bottom */
+}
+footer {
+    margin-top: auto; /* Ensures footer stays at bottom */
+}
+/* Make contact page take full height and push footer down */
+body.contact-page, html.contact-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main contact section grow to fill space */
+.contact-section {
+    flex: 1; /* Pushes footer to bottom */
+}
+footer {
+    margin-top: auto; /* Ensures footer stays at bottom */
+}
+
+/* Contact page layout */
+body.contact-page, html.contact-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section {
+    flex: 1; /* Pushes footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #df586f, #d44747); /* Gradient similar to homepage */
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Centered content inside contact section */
+.contact-content {
+    max-width: 600px;
+    background: rgba(0,0,0,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* Form styling */
+.contact-content input, .contact-content textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.contact-content button {
+    background-color: black;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-content button:hover {
+    background-color: rgb(215, 88, 88);
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Floating animation for contact box */
+@keyframes floatContact {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.contact-content {
+    max-width: 600px;
+    background: rgba(0,0,0,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    animation: floatContact 6s ease-in-out infinite, fadeIn 1.5s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}

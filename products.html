@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MRU Gadgets</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"><h1>MRU GADGETS</h1></div>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="features.html">FEATURES</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+<section class="productgallery">
+    <h2 class="s2">Our Products</h2> 
+    <div class="pro-container">
+        <div class="product-card"> 
+            <a href="smartphone.html"><img src="./assests/images/IPHONE.jpg" width="200" alt="SmartPhone"></a>
+            <h4>SmartPhone</h4>
+            <p>&#8377; 90000</p>
+        </div>
+        <div class="product-card">
+            <a href="smartwatch.html"><img src="./assests/images/watch.jpeg" width="200" alt="SmartWatch"></a>
+            <h4>SmartWatch</h4>
+            <p>&#8377; 5999</p>
+        </div>
+        <div class="product-card">
+            <a href="earpods.html"><img src="./assests/images/earpods.jpeg" width="300" alt="Wireless Earpods"></a>
+            <h4>Wireless Earpods</h4>
+            <p>&#8377; 4999</p>
+        </div>
+        <div class="product-card">
+            <a href="fitnesstracker.html"><img src="./assests/images/fitnessTracker.jpeg" width="360" alt="Fitness Tracker"></a>
+            <h4>Fitness Tracker</h4>
+            <p>&#8377; 2999</p>
+        </div>
+        <!-- Cart Modal -->
+<<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span id="close-cart">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p><strong>Total:</strong> &#8377;<span id="cart-total">0</span></p>
+        <button id="checkout-btn">Checkout</button>
+
+        <!-- Payment Options (hidden initially) -->
+        <div id="payment-section" style="display:none; margin-top:20px;">
+            <h3>Select Payment Method:</h3>
+            <label>
+                <input type="radio" name="payment" value="Credit Card" checked> Credit Card
+            </label><br>
+            <label>
+                <input type="radio" name="payment" value="UPI"> UPI
+            </label><br>
+            <label>
+                <input type="radio" name="payment" value="Netbanking"> Netbanking
+            </label><br>
+            <button id="pay-btn" style="margin-top:10px;">Pay Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Button -->
+<button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+
+    </div>
+</section>
+<script src="./script.js"></script>
+<footer>
+    <p>&copy; MRUGadget. All rights reserved.</p>
+</body>
+</html>
